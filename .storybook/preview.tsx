@@ -15,19 +15,26 @@ const withGlobalStyle = (storyFn) => (
 
 const preview: Preview = {
   parameters: {
-    // automatically create action args for all props that start with "on"
+    // Configuración de Storybook
     actions: { argTypesRegex: '^on.*' },
     dependencies: {
-      // display only dependencies/dependents that have a story in storybook
-      // by default this is false
       withStoriesOnly: true,
-
-      // completely hide a dependency/dependents block if it has no elements
-      // by default this is false
       hideEmpty: true,
+    },
+    // Configuración de Playroom
+    playroom: {
+      url: 'http://localhost:9000',
     },
   },
   decorators: [withGlobalStyle],
-}
+};
 
 export default preview;
+
+export const parameters = {
+  previewTabs: {
+    'storybook/playroom/panel': {
+      hidden: true,
+    },
+  },
+};

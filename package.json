@@ -16,6 +16,8 @@
     "dist"
   ],
   "scripts": {
+    "playroom:start": "playroom start",
+    "playroom:build": "playroom build",
     "patch-package": "patch-package",
     "build": "yarn build-images && yarn patch-package && babel src -d dist --extensions \".js,.jsx,.ts,.tsx\" --ignore \"**/*.stories.tsx\" --ignore \"**/*.stories.js\"",
     "build-images": "yarn svgr --out-dir src/images src/images",
@@ -63,6 +65,7 @@
     "react-github-button": "^0.1.11",
     "react-modal": "^3.11.2",
     "react-popper-tooltip": "^2.11.1",
+    "storybook-addon-playroom": "^4.0.0",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
