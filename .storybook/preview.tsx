@@ -15,18 +15,18 @@ const withGlobalStyle = (storyFn) => (
 
 const preview: Preview = {
   parameters: {
-    // Configuración de Storybook
+
     actions: { argTypesRegex: '^on.*' },
     dependencies: {
       withStoriesOnly: true,
       hideEmpty: true,
     },
-    // Configuración de Playroom
+
     playroom: {
       url: 'http://localhost:9000',
     },
   },
-  decorators: [withGlobalStyle],
+  // decorators: [withGlobalStyle],
 };
 
 export default preview;

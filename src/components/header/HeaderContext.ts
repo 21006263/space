@@ -9,6 +9,6 @@ interface HeaderContextInterface {
 export const defaultHeaderContext = {
   navBreakpoint: breakpoint,
   inverse: false,
-}
+};
 
 export const HeaderContext = createContext<HeaderContextInterface>(defaultHeaderContext);
