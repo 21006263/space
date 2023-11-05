@@ -1,0 +1,175 @@
+
+
+.complete-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+}
+
+.complete-component-header {
+  background-color: #3498db;
+  color: white;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.button-home {
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.complete-component-content {
+  margin: 1rem;
+}
+
+.complete-component-button {
+  background-color: #007bff; /* Realista azul */
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.complete-component-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+
+  margin: 0.5rem;
+}
+
+.complete-component-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  /* border-radius: 4px; */
+  margin: 0.5rem;
+}
+
+.complete-component-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  /* border-radius: 4px; */
+  margin: 0.5rem;
+}
+
+.complete-component-navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.complete-component-navbar li {
+  margin: 0 1rem;
+}
+
+.complete-component-navbar a {
+  text-decoration: none;
+  color: #007bff; /* Realista azul */
+}
+
+.complete-component-footer {
+  background-color: #3498db;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.alert {
+  padding: 1rem;
+  background-color: #f8d7da;
+  color: #721c24; 
+  border: 1px solid #f5c6cb; 
+
+  margin: 0.5rem;
+  text-align: center;
+}
+
+
+.about-alert {
+  background-color: #ffeeba;
+  color: #856404; 
+  border: 1px solid #ffc107; 
+}
+
+
+.contact-alert {
+  background-color: #c3e6cb; 
+  color: #155724; /* Realista verde oscuro */
+  border: 1px solid #28a745; /* Realista verde claro más claro */
+}
+
+
+
+.about-button, .contact-button {
+  background-color: #007bff; 
+  color: white;
+  padding: 1rem 1.5rem;
+  border: 1px solid #0056b3; 
+  cursor: pointer;
+  margin: 0.5rem;
+
+}
+
+.complete-component-navbar a {
+  text-decoration: none;
+  color: #007bff; 
+}
+
+.complete-component-footer {
+  background-color: #3498db;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.alert {
+  padding: 1rem;
+  background-color: #f8d7da; 
+  color: #721c24; 
+  border: 1px solid #f5c6cb; 
+
+  margin: 0.5rem;
+  text-align: center;
+}
+
+/* Estilo de la alerta de "About" */
+.about-alert {
+  background-color: #ffeeba;
+  color: #856404;
+  border: 1px solid #ffc107;
+}
+
+
+.contact-alert {
+  background-color: #c3e6cb;
+  color: #155724; 
+  border: 1px solid #28a745; 
+}
