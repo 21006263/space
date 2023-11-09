@@ -9,6 +9,8 @@ export const background = {
   negative: '#FEDED2',
   warning: '#FFF5CF',
   calmBlue: '#E3F3FF',
+  BrandDark: '#612C69'
+
 };
 
 export const color = {
@@ -24,6 +26,14 @@ export const color = {
   purple: '#6F2CAC',
   ultraviolet: '#2A0481',
   red: '#ff4400',
+  BrandDark: '#612C69',
+  GreysGrey01:'#22272B',
+  BrandAccent:'#275D3A',
+
+    //font
+  TextLight: '#FFFFFF',
+  TextDark:  '#22272B',
+  GreysGrey03:'#CDD3D6',
 
   // Calm
   bluelight: '#E3F3FF', // rgba($color.blue, 12%)

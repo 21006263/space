@@ -47,3 +47,4 @@ export { NavItem } from './header/NavItem';
 export * from './tag/TagItem';
 export * from './tag/TagLink';
 export * from './tag/TagList';
+export * from './playroom/header/HeaderPlayRoom';

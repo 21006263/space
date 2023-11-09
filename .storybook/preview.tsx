@@ -1,6 +1,7 @@
 import React from 'react';
 import { loadFontsForStorybook } from '../src/utils/index';
 import { GlobalStyle } from '../src/components/shared/global';
+import 'semantic-ui-css/semantic.min.css'
 
 import type { Preview } from '@storybook/react';
 
