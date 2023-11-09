@@ -5,7 +5,7 @@ import { Button } from './Button';
 type Story = StoryObj<typeof Button>;
 
 const meta: Meta<typeof Button> = {
-  title: 'Example/Button',
+  title: 'PlayRoom/Button',
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
