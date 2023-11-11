@@ -27,7 +27,7 @@ const preview: Preview = {
       url: 'http://localhost:9000',
     },
   },
-  // decorators: [withGlobalStyle],
+  decorators: [withGlobalStyle],
 };
 
 export default preview;

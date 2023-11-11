@@ -8,4 +8,4 @@ export default {
 } 
 
 
-export const Default = () => <PleaseProvider title="Título de la Página" />;
+export const PleaseProviderComponent = () => <PleaseProvider title="Título de la Página" />;

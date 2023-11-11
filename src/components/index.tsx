@@ -3,7 +3,6 @@ import * as global from './shared/global';
 import * as animation from './shared/animation';
 import * as icons from './shared/icons';
 export { styles, global, animation, icons };
-export * from './playroom/CompleteComponent';
 export * from './Avatar';
 export * from './AvatarList';
 export * from './Badge';
@@ -38,7 +37,6 @@ export * from './clipboard/Clipboard';
 export * from './clipboard/ClipboardIcon';
 export * from './clipboard/ClipboardCode';
 export * from './clipboard/ClipboardInput';
-
 export * from './LinkTabs';
 export * from './CodeSnippets';
 export * from './header/Header';
@@ -47,4 +45,15 @@ export { NavItem } from './header/NavItem';
 export * from './tag/TagItem';
 export * from './tag/TagLink';
 export * from './tag/TagList';
-export * from './playroom/header/HeaderPlayRoom';
+
+import 'semantic-ui-css/semantic.min.css';
+export { default as PlayroomMain } from './playroom/PlayroomMain';
+export * from './playroom/CompleteComponent/CompleteComponent';
+
+
+
+
+
+
+
+

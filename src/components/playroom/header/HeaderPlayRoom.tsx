@@ -1,19 +1,33 @@
+// PlayRoom.tsx
 import React from 'react';
-import { Menu, Container, Image, Input } from 'semantic-ui-react';
+import { Menu, Container, Image, Input, Button } from 'semantic-ui-react';
 import Logo from '../assets/logo.png';
 import Telefono from '../assets/Telefono.svg';
 import Lenguajes from '../assets/Lenguajes.svg';
 import Portals from '../assets/Portails.svg';
 import Arror from '../assets/Arror.svg';
 
+interface PlayRoomProps {
+  logo?: string;
+  colorScheme?: string;
+  text?: string;
+  onClick?: () => void;
+  onButtonClick?: () => void;
+}
 
+const PlayRoom: React.FC<PlayRoomProps> = ({ logo, colorScheme, text, onClick, onButtonClick }) => {
+  const handleButtonClick = () => {
+    alert('¡Welcome!');
+    if (onButtonClick) {
+      onButtonClick();
+    }
+  };
 
-const Header: React.FC = () => {
   return (
     <>
       <h1
         style={{
-          backgroundColor: '#612c69',
+          backgroundColor: colorScheme || '#612c69',
           color: 'white',
           padding: '0 60px',
           width: '100%',
@@ -26,8 +40,9 @@ const Header: React.FC = () => {
           fontWeight: '400px',
           boxSizing: 'none'
         }}
+        onClick={onClick}
       >
-        Australia Government Website
+        {text || 'Australia Government Website'}
       </h1>
       <Container>
         <div
@@ -42,7 +57,7 @@ const Header: React.FC = () => {
           }}
         >
           <Image
-            src={Logo}
+            src={logo || Logo}
             size="small"
             style={{ marginRight: '25px', height: '150px', cursor: 'pointer', width: '300px' }}
           />
@@ -106,7 +121,7 @@ const Header: React.FC = () => {
             style={{ border: 'none', borderBottom: 'none', borderRight: 'none', padding: '0 10px' }}
           >
             For participants
-            <Image src={arror} style={{ height: '15px', cursor: 'pointer', padding: '0 10px' }} />
+            <Image src={Arror} style={{ height: '15px', cursor: 'pointer', padding: '0 10px' }} />
           </Menu.Item>
           <Menu.Item
             style={{ border: 'none', borderBottom: 'none', borderRight: 'none', padding: '0 10px' }}
@@ -163,14 +178,18 @@ const Header: React.FC = () => {
               letterSpacing: '0px',
               textAlign: 'center',
               color: '#FFFFFF',
+              cursor: 'pointer',
             }}
+            onClick={onClick}
           >
             Contact Bureau Number: 1704NE
           </span>
         </div>
       </div>
+
+      <Button disabled inverted onClick={handleButtonClick}>¡Welcome!</Button>
     </>
   );
 };
 
-export default Header;
+export default PlayRoom;
