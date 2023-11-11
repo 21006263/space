@@ -1,16 +1,28 @@
 import React, { FC } from 'react';
-import Componente1 from './Componente1';
-import Componente2 from './Componente2';
-import Componente3 from './Componente3';
+import { Container, Divider } from 'semantic-ui-react';
+import HeaderPlayRoom from './header/HeaderPlayRoom';
+import MakeComplaint from './makeComplaint/MakeComplaint';
+import PleaseProvider from './pleaseProvider/PleaseProvider';
+import PleaseProvideDetails from './pleaseProvideDetails/PleaseProvideDetails';
+import Footer from './footer/Footer';
 
-const ComponentePadre: FC = () => {
+const PlayroomMain: FC = () => {
   return (
-    <div>
-      <Componente1 />
-      <Componente2 />
-      <Componente3 />
-    </div>
+  
+      <Container>
+        <HeaderPlayRoom />
+        <Divider hidden />
+        <MakeComplaint />
+        <Divider hidden />
+        <PleaseProvider />
+        <Divider hidden />
+        <PleaseProvideDetails />
+        <Divider hidden />
+        <Footer />
+      </Container>
+
   );
 };
 
-export default ComponentePadre;
+export default PlayroomMain;
+

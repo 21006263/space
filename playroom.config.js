@@ -1,30 +1,11 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
   components: './src/components/index.tsx',
   outputPath: './storybook-static/playroom',
-  widths: [
-    ['Playroom1', 320],
-    ['Playroom1', 576],
-    ['Playroom3', 768],
-    ['Playroom4', 768],
-    ['Playroom5', 1200],
-  ],
   exampleCode: `
-  <CompleteComponent
-  primary={true}
-  size="large"
-  headerText="Main Header"
-  contentText="This is the content of the component."
-  footerText="Footer"
-  textAreaValue="Example text in text area."
-  onButtonClick={() => alert("¡You have pressed botón!")}
-  onTextAreaChange={(e) => console.log(e.target.value)}
-  onHomeButtonClick={() => alert('You have pressed "Home"')}
-  onAboutButtonClick={() => alert('You have pressed "About"')}
-  onContactButtonClick={() => alert('You have pressed botón "Contact"')}
-  onAlertAboutClick={() => alert('You have pressed "About"')}
-  onAlertContactClick={() => alert('You have pressed "Contact"')}
-/>
+  <PlayroomMain></PlayroomMain>
   `,
   webpackConfig: () => ({
     module: {
@@ -50,7 +31,21 @@ module.exports = {
           test: /\.(svg|png|jpg)$/,
           use: ['file-loader'],
         },
+        // Regla para los archivos CSS de Semantic UI
+        {
+          test: /\.css$/,
+          include: path.resolve(__dirname, 'node_modules/semantic-ui-css'),
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+          ],
+        },
       ],
     },
+    plugins: [
+      // Plugin para extraer CSS en archivos separados
+      new MiniCssExtractPlugin(),
+    ],
   }),
 };
+
