@@ -1,34 +1,33 @@
 // MakeComplaint.stories.tsx
 import React from 'react';
-import { action } from '@storybook/addon-actions';
-import MakeComplaint from './MakeComplaint';
+import MakeComplaint, { MakeComplaintProps } from './MakeComplaint'; // Asegúrate de tener la ruta correcta al componente
+
+//import MakeComplaint from './MakeComplaint';
 
 export default {
   title: 'PlayRoom/MakeComplaint',
   component: MakeComplaint,
 };
 
-const Template = (args) => <MakeComplaint {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {};
 
-export const WithYesButtonClick = Template.bind({});
-WithYesButtonClick.args = {
-  onYesButtonClick: action('Yes button clicked'),
-};
 
-export const WithNoButtonClick = Template.bind({});
-WithNoButtonClick.args = {
-  onNoButtonClick: action('No button clicked'),
-};
+// Historia básica
+export const Basic = () => <MakeComplaint />;
 
-export const WithSelectChange = Template.bind({});
-WithSelectChange.args = {
-  onSelectChange: action('Select changed'),
-};
+// Historia con propiedades personalizadas
+export const WithCustomProps = () => {
+  const customProps: MakeComplaintProps = {
+    buttonProps: {
+      onClick: () => console.log("Custom button clicked!"),
+    },
+    selectProps: {
+      placeholder: "Custom Placeholder",
+    },
+    textAreaProps: {
+      placeholder: "Custom Text Area Placeholder",
+    },
+  };
 
-export const WithTextAreaChange = Template.bind({});
-WithTextAreaChange.args = {
-  onTextAreaChange: action('TextArea changed'),
+  return <MakeComplaint {...customProps} />;
 };

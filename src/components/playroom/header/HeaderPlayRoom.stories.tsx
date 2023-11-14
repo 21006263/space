@@ -1,14 +1,14 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import PlayRoom from './HeaderPlayRoom';
+import HeaderPlayRoom from './HeaderPlayRoom';
 import Logo from '../assets/design-system.png'
 
 export default {
   title: 'PlayRoom/Header',
-  component: PlayRoom,
+  component: HeaderPlayRoom,
 };
 
-const Template = (args) => <PlayRoom {...args} />;
+const Template = (args) => <HeaderPlayRoom {...args} />;
 
 export const HeaderComponent = Template.bind({});
 HeaderComponent.args = {
