@@ -2,6 +2,7 @@ import * as styles from './shared/styles';
 import * as global from './shared/global';
 import * as animation from './shared/animation';
 import * as icons from './shared/icons';
+
 export { styles, global, animation, icons };
 export * from './Avatar';
 export * from './AvatarList';
@@ -46,14 +47,14 @@ export * from './tag/TagItem';
 export * from './tag/TagLink';
 export * from './tag/TagList';
 
+// eslint-disable-next-line import/first
 import 'semantic-ui-css/semantic.min.css';
-export { default as PlayroomMain } from './playroom/PlayroomMain';
+
 export * from './playroom/CompleteComponent/CompleteComponent';
+export { default as PlayroomMain } from './playroom/PlayroomMain';
 
-
-
-
-
-
-
-
+export { default as HeaderPlayRoom } from './playroom/header/HeaderPlayRoom';
+export { default as MakeComplaint } from './playroom/makeComplaint/MakeComplaint';
+export { default as PleaseProvider } from './playroom/pleaseProvider/PleaseProvider';
+export { default as PleaseProvideDetails } from './playroom/pleaseProvideDetails/PleaseProvideDetails';
+export { default as Footer } from './playroom/footer/Footer';

@@ -15,7 +15,7 @@ interface PlayRoomProps {
   onButtonClick?: () => void;
 }
 
-const PlayRoom: React.FC<PlayRoomProps> = ({ logo, colorScheme, text, onClick, onButtonClick }) => {
+const HeaderPlayRoom: React.FC<PlayRoomProps> = ({ logo, colorScheme, text, onClick, onButtonClick }) => {
   const handleButtonClick = () => {
     alert('¡Welcome!');
     if (onButtonClick) {
@@ -59,7 +59,7 @@ const PlayRoom: React.FC<PlayRoomProps> = ({ logo, colorScheme, text, onClick, o
           <Image
             src={logo || Logo}
             size="small"
-            style={{ marginRight: '25px', height: '150px', cursor: 'pointer', width: '300px' }}
+            style={{ marginRight: '25px', height: '15%', cursor: 'pointer', width: '25%' }}
           />
           <Menu
             secondary
@@ -109,7 +109,7 @@ const PlayRoom: React.FC<PlayRoomProps> = ({ logo, colorScheme, text, onClick, o
             >
               <Input
                 placeholder="Search"
-                style={{ border: 'none', height: '30px', cursor: 'pointer' }}
+                style={{ border: 'none', height: '5%', cursor: 'pointer' }}
               />
             </Menu.Item>
           </Menu>
@@ -192,4 +192,4 @@ const PlayRoom: React.FC<PlayRoomProps> = ({ logo, colorScheme, text, onClick, o
   );
 };
 
-export default PlayRoom;
+export default HeaderPlayRoom;
