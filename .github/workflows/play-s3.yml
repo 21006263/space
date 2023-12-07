@@ -11,7 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: yarn
-      - run: CI='' yarn run build
       - run: yarn playroom build
       - uses: jakejarvis/s3-sync-action@master
         with:
