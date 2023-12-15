@@ -24,7 +24,8 @@ const preview: Preview = {
     },
 
     playroom: {
-      url: 'http://localhost:9000',
+      url: 'https://s3.playroom.glidaa.com/',
+      //url: 'http://localhost:9000',
     },
   },
  // decorators: [withGlobalStyle],
